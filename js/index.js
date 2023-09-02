@@ -108,5 +108,9 @@ const sortButton = document.getElementById("sort-button");
 sortButton.addEventListener("click", () => {
   handleVideos(currentCategoryId, true);
 });
+function blog() {
+  window.location.href = "blog.html";
+}
+
 handleCategory();
 handleVideos("1000");
