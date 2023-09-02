@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Blog</title>
+    <title>PH Blog</title>
     <style>
         .inter {
             font-family: "Inter", sans-serif;
@@ -18,9 +18,84 @@
     </style>
 </head>
 
-<body>
-    <h1>ROMAN</h1>
-
+<body class="inter lg:m-12 md:m-10 m-5">
+    <header>
+        <nav>
+            <div
+                class="flex flex-col justify-center items-center text-center border-b-2 space-y-4 lg:pb-12 md:pb-10 pb-5">
+                <img src="./images/Logo.png" alt="">
+                <div class="bg-[#ff1f3d] text-white text-2xl font-bold px-4 py-2 rounded-xl">
+                    <h1>BLOG</h1>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+<section>
+    <div>
+        <h1 class="text-xl font-bold mb-6 mt-12 text-[#ff1f3d]">1. Discuss the scope of 'var', 'let', and 'const'</h1>
+        <p class="mb-4">In JavaScript, there are three components ‘var’, ‘let’, and ‘const’ used to declare variables. ‘var’ was the original way to declare variables when the language was first introduced in the mid-1990s. On the other hand, ‘let’ and ‘const’ were introduced with ECMAScript 6 (ES6) in 2015 as a response to the shortcomings of ‘var’. These three keywords have different scopes and behaviors, making it crucial for developers to understand when and how to use them in their code. </p>
+        <h3 class="text-lg font-semibold mb-3">1. 'var'</h3>
+        <ul class="space-y-2 mb-4">
+            <li>(a) ‘var’ has a function-level scope, meaning it is accessible throughout the entire function where it's declared.</li>
+            <li>(b) If it’s declared outside of any function, it becomes a global variable, accessible anywhere in the script.</li>
+            <li>(c) Variables declared with ‘var’ are hoisted. Due to hoisting, it can be used before it's declared, but its value will be ‘undefined’.</li>
+        </ul>
+        <h3 class="text-lg font-semibold mb-3">2. 'let'</h3>
+        <ul class="space-y-2 mb-4">
+            <li>(a) ‘let’ has block-level scope, meaning it is limited to the block, statement, or expression where it's defined.</li>
+            <li>(b) Variables declared with ‘let’ are not hoisted, so they can't be used before their declaration within the same block.</li>
+            <li>(c) It's a better choice than ‘var’ for creating variables with limited visibility.</li>
+            
+        </ul>
+        <h3 class="text-lg font-semibold mb-3">1. 'const'</h3>
+        <ul class="space-y-2 mb-4">
+            <li>(a) ‘const’ also has block-level scope and is used to declare constants, which cannot be reassigned once initialized.</li>
+            <li>(b) Like ‘let’, variables declared with ‘const’ are not hoisted.</li>
+            <li>(c) ‘const’ can be used to ensure a variable's value remains constant throughout its scope.</li>
+        </ul>
+        <p class="mt-8">Choosing the right variable declaration keyword (‘var’, ‘let’, or ‘const’) depends on the desired scope and mutability of the variable.</p>
+    </div>
+</section>
+<section>
+    <div>
+        <h1 class="text-xl font-bold mb-6 mt-12 text-[#ff1f3d]">2. Tell us the use cases of 'null' and 'undefined'</h1>
+        <p class="mb-4">‘null’ and ‘undefined’ are two distinct values that represent the absence of meaningful data. They have specific use cases and behaviors that are essential for writing clean code.</p>
+        <h3 class="text-lg font-semibold mb-3">1. 'null'</h3>
+        <ul class="space-y-2 mb-4">
+            <li>(a) 'null' is a value that signifies the intentional absence of any object value or value assignment. It is explicitly assigned by a developer to indicate that a variable should have no meaningful value.</li>
+            <li>(b) Uses 'null' when someone wants to indicate that a variable or object property should be empty or uninitialized.</li>
+        </ul>
+        <h3 class="text-lg font-semibold mb-3">2. 'undefined'</h3>
+        <ul class="space-y-2 mb-4">
+            <li>(a) 'undefined' is a value that indicates a variable or object property has not been assigned any value. Unlike null, it is often unintentional and occurs when a variable is declared but not initialized.</li>
+            <li>(b) Uses ‘undefined’ when wanting to check if a variable or property has been set or if a function parameter has been provided.</li>
+        </ul>
+        <p>‘null’ and ‘undefined’ serve distinct purposes in JavaScript. ‘null’ represents the intentional absence of a value and is set by developers, while ‘undefined’ represents the absence of a value due to a variable or property not being assigned.</p>
+    </div>
+</section>
+<section>
+    <div>
+        <h1 class="text-xl font-bold mb-6 mt-12 text-[#ff1f3d]">3. What do you mean by REST API?</h1>
+        <p class="mb-4">REST API, or Representational State Transfer Application Programming Interface, is a fundamental concept in modern web development. It's a set of rules and principles that govern how web services communicate with each other.</p>
+        <h3 class="text-lg font-semibold mb-3">1. Resources</h3>
+        <p class="mb-4">At the heart of REST are resources, which can be anything you want to share or interact with over the internet. Think of them as objects or data, like user profiles, photos, or product listings.</p>
+        <h3 class="text-lg font-semibold mb-3">2. HTTP Methods</h3>
+        <p class="mb-4">REST APIs use standard HTTP methods to perform actions on resources:</p>
+        <ul class="space-y-2 mb-4">
+            <li>(a) GET: Retrieve data (like viewing a webpage).</li>
+            <li>(b) POST: Create new data (like submitting a form).</li>
+            <li>(c) PUT: Update existing data (like editing a profile).</li>
+            <li>(d) DELETE: Remove data (like deleting a post).</li>
+        </ul>
+        <h3 class="text-lg font-semibold mb-3">3. Responses</h3>
+        <p class="mb-4">When making a request to a REST API, Can get a response, typically in a format like JSON. This response contains the data requested or information about the outcome request.</p>
+        <h3 class="text-lg font-semibold mb-3">4. CRUD Operations</h3>
+        <p class="mb-4">REST is performing CRUD (Create, Read, Update, Delete) operations on resources. For example, someone uses GET to read data, POST to create data, PUT to update data, and DELETE to remove data.</p>
+        <p class="mt-8">REST APIs provide a structured way for different software systems to talk to each other over the Internet, making it easy to share and manipulate data. They follow a simple set of rules, making them a powerful tool in web development.</p>
+    </div>
+</section>
+    </main>
 </body>
 
 </html>
